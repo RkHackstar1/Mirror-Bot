@@ -179,7 +179,7 @@ class GoogleDriveHelper:
         media_body = MediaFileUpload(path, mimetype=mime_type, resumable=False)
         file_metadata = {
             "name": file_name,
-            "description": "Uploaded Using Harsh MirrorBot",
+            "description": "Uploaded Using  RDriveMirrorBot",
             "mimeType": mime_type,
         }
         if parent_id is not None:
@@ -229,7 +229,7 @@ class GoogleDriveHelper:
         # File body description
         file_metadata = {
             "name": file_name,
-            "description": "Uploaded Using Harsh MirrorBot",
+            "description": "Uploaded Using RDriveMirrorBot",
             "mimeType": mime_type,
         }
         try:
@@ -684,9 +684,9 @@ class GoogleDriveHelper:
                     nxt_page += 1
             Telegraph(access_token=telegraph_token).edit_page(
                 path=self.path[prev_page],
-                title="Mirror Bot Search",
-                author_name="Mirror Bot",
-                author_url="https://github.com/magneto261290/magneto-python-aria",
+                title="RDriveMirror Bot Search",
+                author_name="RDriveMirror Bot",
+                author_url="https://t.me/RDriveMirror",
                 html_content=content,
             )
         return
@@ -932,9 +932,9 @@ class GoogleDriveHelper:
             return "I ..I found nothing of that sort :(", None
         for content in self.telegraph_content :
             self.path.append(Telegraph(access_token=telegraph_token).create_page(
-                                            title = 'Mirrorbot Search',
-                                            author_name='Repo Link',
-                                            author_url='https://github.com/harshpreets63/Mirror-Bot',
+                                            title = 'RdriveMirror Bot Search',
+                                            author_name='RDriveMirror Bot',
+                                            author_url='https://t.me/RDriveMirror',
                                             html_content=content
                                             )['path'])    
         self.num_of_path = len(self.path)
@@ -1036,9 +1036,9 @@ class GoogleDriveHelper:
         for content in self.telegraph_content:
             self.path.append(
                 Telegraph(access_token=telegraph_token).create_page(
-                    title="Mirror Bot Search",
-                    author_name="Repo Link",
-                    author_url="https://github.com/harshpreets63/Mirror-Bot",
+                    title="RdriveMirror Bot Search",
+                    author_name="RDriveMirror Bot",
+                    author_url="https://t.me/RDriveMirror",
                     html_content=content,
                 )["path"]
             )
