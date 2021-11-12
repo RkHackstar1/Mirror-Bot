@@ -62,8 +62,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/harshpreets63/Mirror-Bot")
-    buttons.buildbutton("Channel", "https://t.me/HarshMirror")
+    buttons.buildbutton("Group", "https://t.me/joinchat/373jsffwYURiMDBl")
+    buttons.buildbutton("Channel", "https://t.me/RDriveMirror")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -73,7 +73,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease join our Channel.\nOr Host Your Own Bot Using My Repo.',
+            'Oops! not a Authorized user.\nPlease join our Channel.\nAnd you are welcome to the group.',
             context.bot,
             update,
             reply_markup,
@@ -222,7 +222,7 @@ def main():
     dispatcher.add_handler(stats_handler)
     dispatcher.add_handler(log_handler)
     updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
-    LOGGER.info("Bot Started!")
+    LOGGER.info("Apun Zinda Hai!")
     signal.signal(signal.SIGINT, fs_utils.exit_clean_up)
 
 
